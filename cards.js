@@ -23,14 +23,14 @@ const cardSpec = {
 const faces = {
 	majorArcana: {
 		//TODO missing
-		'02': 'faces/02-high-priestess-mactoron.jpg',
-		'03': 'faces/03-mistress-of-earth-davcina.jpg',
-		'04': 'faces/04-lord-of-earth-kthunae.jpg',
-		'05': 'faces/05-master-atazoth.jpg',
-		'06': 'faces/06-lovers-karu-samsu.jpg',
-		'07': 'faces/07-azoth-satanas1.jpg',
-		'08': 'faces/08-change-nekalah2.jpg',
-		'09': 'faces/09-hermit-sauroctonos2.jpg',
+		'2': 'faces/02-high-priestess-mactoron.jpg',
+		'3': 'faces/03-mistress-of-earth-davcina.jpg',
+		'4': 'faces/04-lord-of-earth-kthunae.jpg',
+		'5': 'faces/05-master-atazoth.jpg',
+		'6': 'faces/06-lovers-karu-samsu.jpg',
+		'7': 'faces/07-azoth-satanas1.jpg',
+		'8': 'faces/08-change-nekalah2.jpg',
+		'9': 'faces/09-hermit-sauroctonos2.jpg',
 		'10': 'faces/10-wyrd-azanigin2.jpg',
 		'11': 'faces/11-desire-lidagon1.jpg',
 		'12': 'faces/12-opfer-vindex2.jpg',
@@ -91,7 +91,7 @@ const MajorArcanaCard = _.curry((sphere, card) => {
 	const darkGod = card[2];
 	const altName = card[3] || cardName;
 	const noThe = card[4] || false;
-	const image = faces.majorArcana[number] || 'NO IMAGE';
+	const image = faces.majorArcana[number] || undefined;
 	const cardObj = new Card();
 	return cardObj
 		.setCardName(cardName)
