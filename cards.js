@@ -20,6 +20,7 @@ const cardSpec = {
 		'imagePath'
 	]
 };
+
 const faces = {
 	majorArcana: {
 		//TODO missing
@@ -44,28 +45,35 @@ const faces = {
 		'20': 'faces/20-aeon-naos2.jpg'
 	},
 	minorArcana: {
-		magus: [ //TODO missing
+		Priest: [ //TODO missing
 			'faces/magus_of_chalices2.jpg',
 			'faces/magus_of_pentacles.jpg'
 		],
-		maiden: [
+		Maiden: [
 			'faces/maiden_of_chalices.jpg',
 			'faces/maiden-of-pentacles.jpg',
 			'faces/maiden-of-swords1.jpg',
 			'faces/maiden_of_wands.jpg',
 		],
-		mousa: [ //TODO missing
+		Priestess: [ //TODO missing
 			'faces/mousa_of_chalices1.jpg',
 			'faces/mousa_of_swords.jpg',
 			'faces/mousa_of_wands.jpg',
 		],
-		warrior: [
+		Warrior: [
 			'faces/warrior_of_chalices.jpg',
 			'faces/warrior_of_pentacles.jpg',
 			'faces/warrior-of-swords2.jpg',
 			'faces/warrior-of-wands21.jpg'
 		]
 	}
+};
+
+const getMinorImage = (court, position) => {
+	const getAtPosition = _.compose(_.prop(position), _.prop('minorArcana'));
+	const getAtCourt = _.includes(court.toLowerCase());
+	const possibilities = getAtPosition(faces).filter(getAtCourt);
+	return possibilities[0] || undefined;
 };
 
 const setX = _.curry(function (propName, propVal) {
@@ -108,6 +116,7 @@ const MinorArcanaCard = court => position => {
 	return new Card()
 		.setCardName(`${position} of ${court}`)
 		.setPosition(position)
+		.setImagePath(getMinorImage(court, position))
 		.setArcana('Minor Arcana');
 };
 
@@ -174,7 +183,7 @@ const positions = [
 const majorArcana = spheres.map(newCard).flat();
 
 const minorArcana = positions.map(p => {
-	return Object.values(courts).map(c => {
+	return Object.keys(courts).map(c => {
 		return MinorArcanaCard(c)(p);
 	});
 }).flat();

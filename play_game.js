@@ -60,5 +60,3 @@ const app = _.compose(
 print(
 	app('celtic.html')
 );
-
-//TODO draw celtic spread
