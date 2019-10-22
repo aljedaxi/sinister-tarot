@@ -28,25 +28,25 @@ const cardSpec = {
 const faces = {
 	majorArcana: {
 		//TODO missing
-		'2': 'faces/02-high-priestess-mactoron.jpg',
-		'3': 'faces/03-mistress-of-earth-davcina.jpg',
-		'4': 'faces/04-lord-of-earth-kthunae.jpg',
-		'5': 'faces/05-master-atazoth.jpg',
-		'6': 'faces/06-lovers-karu-samsu.jpg',
-		'7': 'faces/07-azoth-satanas1.jpg',
-		'8': 'faces/08-change-nekalah2.jpg',
-		'9': 'faces/09-hermit-sauroctonos2.jpg',
-		'10': 'faces/10-wyrd-azanigin2.jpg',
-		'11': 'faces/11-desire-lidagon1.jpg',
-		'12': 'faces/12-opfer-vindex2.jpg',
-		'13': 'faces/13-death-nythra1.jpg',
-		'14': 'faces/14-hel-aosoth1.jpg',
-		'15': 'faces/15-deofel-noctulius2.jpg',
-		'16': 'faces/16-war-abatu2.jpg',
-		'17': 'faces/17-star-nemicu3.jpg',
-		'18': 'faces/18-moon-shugara3.jpg',
-		'19': 'faces/19-sun-velpecula1.jpg',
-		'20': 'faces/20-aeon-naos2.jpg'
+		2: 'faces/02-high-priestess-mactoron.jpg',
+		3: 'faces/03-mistress-of-earth-davcina.jpg',
+		4: 'faces/04-lord-of-earth-kthunae.jpg',
+		5: 'faces/05-master-atazoth.jpg',
+		6: 'faces/06-lovers-karu-samsu.jpg',
+		7: 'faces/07-azoth-satanas1.jpg',
+		8: 'faces/08-change-nekalah2.jpg',
+		9: 'faces/09-hermit-sauroctonos2.jpg',
+		10: 'faces/10-wyrd-azanigin2.jpg',
+		11: 'faces/11-desire-lidagon1.jpg',
+		12: 'faces/12-opfer-vindex2.jpg',
+		13: 'faces/13-death-nythra1.jpg',
+		14: 'faces/14-hel-aosoth1.jpg',
+		15: 'faces/15-deofel-noctulius2.jpg',
+		16: 'faces/16-war-abatu2.jpg',
+		17: 'faces/17-star-nemicu3.jpg',
+		18: 'faces/18-moon-shugara3.jpg',
+		19: 'faces/19-sun-velpecula1.jpg',
+		20: 'faces/20-aeon-naos2.jpg'
 	},
 	minorArcana: {
 		Priest: [ //TODO missing
@@ -62,7 +62,7 @@ const faces = {
 		Priestess: [ //TODO missing
 			'faces/mousa_of_chalices1.jpg',
 			'faces/mousa_of_swords.jpg',
-			'faces/mousa_of_wands.jpg',
+			'faces/mousa_of_wands.jpg'
 		],
 		Warrior: [
 			'faces/warrior_of_chalices.jpg',
@@ -71,57 +71,6 @@ const faces = {
 			'faces/warrior-of-wands21.jpg'
 		]
 	}
-};
-
-const getMinorImage = (court, position) => {
-	const getAtPosition = _.compose(_.prop(position), _.prop('minorArcana'));
-	const getAtCourt = _.includes(court.toLowerCase());
-	const possibilities = getAtPosition(faces).filter(getAtCourt);
-	return possibilities[0] || undefined;
-};
-
-const setX = _.curry(function (propName, propVal) {
-	this[propName] = propVal;
-	return this;
-});
-
-const tCase = s => `${s[0].toUpperCase()}${s.slice(1)}`;
-
-const cardConstructorConstructor = card => function () {
-	const cardObj = {};
-	card.properties.forEach(p => {
-		cardObj[`set${tCase(p)}`] = setX(p);
-	});
-	return cardObj;
-};
-
-const Card = cardConstructorConstructor(cardSpec);
-
-const MajorArcanaCard = _.curry((sphere, card) => {
-	const number = card[0];
-	const cardName = card[1];
-	const darkGod = card[2];
-	const altName = card[3] || cardName;
-	const noThe = card[4] || false;
-	const image = faces.majorArcana[number] || undefined;
-	const cardObj = new Card();
-	return cardObj
-		.setCardName(cardName)
-		.setSphere(sphere)
-		.setNumber(number)
-		.setArcana('Major Arcana')
-		.setDarkGod(darkGod)
-		.setAltName(altName)
-		.setImagePath(image)
-		.setNoThe(noThe);
-});
-
-const MinorArcanaCard = court => position => {
-	return new Card()
-		.setCardName(`${position} of ${court}`)
-		.setPosition(position)
-		.setImagePath(getMinorImage(court, position))
-		.setArcana('Minor Arcana');
 };
 
 const spheres = [
@@ -162,13 +111,6 @@ const spheres = [
 	]]
 ];
 
-const newCard = sphere => {
-	const sphereName = sphere[0];
-	const cards = sphere[1];
-	const generator = MajorArcanaCard(sphereName);
-	return cards.map(generator);
-};
-
 const courts = {
 	Wands: 'Mercury',
 	Pentacles: 'Moon',
@@ -184,7 +126,62 @@ const positions = [
 	// 'Ace'
 ];
 
-const majorArcana = spheres.map(newCard).flat();
+const getMinorImage = (court, position) => {
+	const getAtPosition = _.compose(_.prop(position), _.prop('minorArcana'));
+	const getAtCourt = _.includes(court.toLowerCase());
+	const possibilities = getAtPosition(faces).filter(getAtCourt);
+	return possibilities[0] || undefined;
+};
+
+const tCase = s => `${s[0].toUpperCase()}${s.slice(1)}`;
+
+const setX = _.curry(function (propName, propVal) {
+	this[propName] = propVal;
+	return this;
+});
+
+const cardConstructorConstructor = card => function () {
+	const cardObj = {};
+	card.properties.forEach(p => {
+		cardObj[`set${tCase(p)}`] = setX(p);
+	});
+	return cardObj;
+};
+
+const Card = cardConstructorConstructor(cardSpec);
+
+const MajorArcanaCard = _.curry((sphere, card) => {
+	const number = card[0];
+	const cardName = card[1];
+	const darkGod = card[2];
+	const altName = card[3] || cardName;
+	const noThe = card[4] || false;
+	const image = faces.majorArcana[number] || undefined;
+	const cardObj = new Card();
+	return cardObj
+		.setCardName(cardName)
+		.setSphere(sphere)
+		.setNumber(number)
+		.setArcana('Major Arcana')
+		.setDarkGod(darkGod)
+		.setAltName(altName)
+		.setImagePath(image)
+		.setNoThe(noThe);
+});
+
+const MinorArcanaCard = court => position => {
+	return new Card()
+		.setCardName(`${position} of ${court}`)
+		.setPosition(position)
+		.setImagePath(getMinorImage(court, position))
+		.setArcana('Minor Arcana');
+};
+
+const majorArcana = spheres.map(sphere => {
+	const sphereName = sphere[0];
+	const cards = sphere[1];
+	return cards.map(MajorArcanaCard(sphereName));
+}).flat();
 
 const minorArcana = positions.map(p => {
 	return Object.keys(courts).map(c => {
