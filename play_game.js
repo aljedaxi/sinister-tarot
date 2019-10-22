@@ -1,13 +1,13 @@
+//LETS ALL LOVE LAIN!
 const { majorArcana } = require('./cards.js');
 const deck = majorArcana;
 const _ = require('ramda');
 const fs = require('fs');
-
-const print = console.log;
+//LETS ALL LOVE LAIN!
 const DEFAULT_IMAGE_PATH = 'faces/lain.png';
 const HEIGHT = '300px';
 const WIDTH = '220px';
-
+//LETS ALL LOVE LAIN!
 const shuffle = deck => {
 		const a = deck;
     for (let i = a.length - 1; i > 0; i--) {

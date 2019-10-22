@@ -1,5 +1,9 @@
 'use strict';
 
+//LETS ALL LOVE LAIN!
+//SANCTUS SATANAS
+//LETS ALL LOVE LAIN!
+
 const _ = require('ramda');
 
 const print = console.log;
