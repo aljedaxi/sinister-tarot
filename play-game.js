@@ -75,7 +75,7 @@ const fillWithCards = (deck, fileString) => {
 
 const fillBoardWithCards = ([deck, board]) => fillWithCards(deck, board);
 
-const readFiles = boardFile => deckName => unboxDeck(deckName)
+const readFiles = boardFile => arcana => unboxDeck(arcana)
 	.and(readBoard(boardFile)).run().future();
 
 const app = log => layoutFile => _.compose(
@@ -86,10 +86,10 @@ const app = log => layoutFile => _.compose(
 
 const drawCeltic = app(print)('celtic.html');
 
-const whichDeck = {
+const arcanae = {
 	'deck': 'deck',
 	'majorArcana': 'Major Arcana',
 	'minorArcana': 'Minor Arcana'
 };
 
-drawCeltic(whichDeck.majorArcana);
+drawCeltic(arcanae.majorArcana);
