@@ -1,30 +1,16 @@
 'use strict';
 
-//LETS ALL LOVE LAIN!
-//SANCTUS SATANAS
-//LETS ALL LOVE LAIN!
+// LETS ALL LOVE LAIN!
+// SANCTUS     SATANAS
+// LETS ALL LOVE LAIN!
 
 const _ = require('ramda');
-
+const fs = require('fs');
+const {task} = require('folktale/concurrency/task');
+// LETS ALL LOVE LAIN!
 const print = console.log;
 const NO_THE = true;
-
-const cardSpec = {
-	noThe: NO_THE,
-	properties: [
-		'cardName',
-		'number',
-		'sphere',
-		'darkGod',
-		'court',
-		'position',
-		'arcana',
-		'altName',
-		'noThe',
-		'imagePath'
-	]
-};
-
+// LETS ALL LOVE LAIN!
 const faces = {
 	majorArcana: {
 		//TODO missing
@@ -71,6 +57,13 @@ const faces = {
 			'faces/warrior-of-wands21.jpg'
 		]
 	}
+};
+
+const getMinorImage = (court, position) => {
+	const getAtPosition = _.compose(_.prop(position), _.prop('minorArcana'));
+	const getAtCourt = _.includes(court.toLowerCase());
+	const possibilities = getAtPosition(faces).filter(getAtCourt);
+	return possibilities[0] || undefined;
 };
 
 const spheres = [
@@ -126,11 +119,20 @@ const positions = [
 	// 'Ace'
 ];
 
-const getMinorImage = (court, position) => {
-	const getAtPosition = _.compose(_.prop(position), _.prop('minorArcana'));
-	const getAtCourt = _.includes(court.toLowerCase());
-	const possibilities = getAtPosition(faces).filter(getAtCourt);
-	return possibilities[0] || undefined;
+const cardSpec = {
+	noThe: NO_THE,
+	properties: [
+		'cardName',
+		'number',
+		'sphere',
+		'darkGod',
+		'court',
+		'position',
+		'arcana',
+		'altName',
+		'noThe',
+		'imagePath'
+	]
 };
 
 const tCase = s => `${s[0].toUpperCase()}${s.slice(1)}`;
@@ -140,7 +142,7 @@ const setX = _.curry(function (propName, propVal) {
 	return this;
 });
 
-const cardConstructorConstructor = card => function () {
+const cardConstructorConstructor = card => function Card() {
 	const cardObj = {};
 	card.properties.forEach(p => {
 		cardObj[`set${tCase(p)}`] = setX(p);
@@ -177,20 +179,63 @@ const MinorArcanaCard = court => position => {
 		.setArcana('Minor Arcana');
 };
 
-const majorArcana = spheres.map(sphere => {
+const sphereToCard = sphere => {
 	const sphereName = sphere[0];
 	const cards = sphere[1];
 	return cards.map(MajorArcanaCard(sphereName));
-}).flat();
+};
 
-const minorArcana = positions.map(p => {
+const positionToCard = p => {
 	return Object.keys(courts).map(c => {
 		return MinorArcanaCard(c)(p);
 	});
-}).flat();
+};
+
+const makeDeck = inputToCard => _.compose(
+	_.flatten,
+	_.map(inputToCard)
+);
+
+const makeMajorArcana = makeDeck(sphereToCard);
+const makeMinorArcana = makeDeck(positionToCard);
+
+const majorArcana = makeMajorArcana(spheres);
+const minorArcana = makeMinorArcana(positions);
+const deck = _.concat(minorArcana, majorArcana);
+const errorCallback = err => {
+	if (err) throw err;
+};
+
+const writeToFile = _.curry((filename, s) => {
+	return task(resolver => {
+		resolver.resolve(
+			fs.writeFile(filename, s, errorCallback)
+		)
+	});
+});
+
+const prepareForStorage = card => {
+	const strippedCard = {};
+	Object.keys(card).forEach(property => {
+		if (cardSpec.properties.includes(property)) {
+			strippedCard[property] = card[property];
+		}
+	});
+	return strippedCard;
+};
+
+const cacheDeck = log => _.compose(
+	log,
+	_.map(_.compose(
+		JSON.stringify,
+		prepareForStorage
+	))
+);
+
+//cacheDeck(writeToFile('deck.json'))(deck).run();
 
 module.exports = {
-	deck: [...majorArcana, ...minorArcana],
+	deck: _.concat(minorArcana, majorArcana),
 	minorArcana,
 	majorArcana
 };

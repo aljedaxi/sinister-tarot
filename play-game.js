@@ -1,9 +1,9 @@
 // LETS ALL LOVE LAIN!
 const fs = require('fs');
 const _ = require('ramda');
-// LETS ALL LOVE LAIN!
-const {majorArcana} = require('./cards.js');
-const deck = majorArcana;
+const {task, of} = require('folktale/concurrency/task');
+task.of = of;
+const CACHE_FILE = 'deck.json';
 // LETS ALL LOVE LAIN!
 const print = console.log;
 const HEIGHT = '300px';
@@ -14,11 +14,36 @@ const shuffle = a => {
 		const j = Math.floor(Math.random() * (i + 1));
 		[a[i], a[j]] = [a[j], a[i]];
 	}
+
+	return a;
 };
 
-shuffle(deck);
+const generalReadFile = wrapData => {
+	return filename => res => fs.readFile(filename, 'utf8', (err, data) => {
+		if (err) {
+			throw err;
+		}
 
-const drawCard = deck.pop.bind(deck);
+		res.resolve(wrapData(data));
+	});
+};
+
+const readFile = generalReadFile(_.identity);
+
+const getDeckFromCache = arcana => {
+	return generalReadFile(_.compose(
+		// _.prop(arcana), // TODO implement
+		shuffle, 
+		JSON.parse)
+	)(CACHE_FILE);
+};
+
+const getDeckFromCardsJs = arcana => res => res.resolve(require('./cards.js')[arcana]);
+
+const unboxDeck = arcana => task(getDeckFromCache(arcana))
+	.orElse(task.of(getDeckFromCardsJs(arcana)));
+
+const readBoard = filename => task(readFile(filename));
 
 const imgCard = cardImage => (cardImage) ? `<img src="${cardImage}" height="${HEIGHT}" width="${WIDTH}"/>` : false;
 const getCardImage = _.prop('imagePath');
@@ -29,15 +54,16 @@ const tagitize = _.either(grabImgCard, makeImgCard);
 
 const cardInClassP = s => /class="(card|card crossed)"/.test(s);
 
-const innerHTML = number => `document.getElementById("${number}").innerHTML = '${tagitize(drawCard())}'`;
+const innerHTML = drawCard => number => `document.getElementById("${number}").innerHTML = '${tagitize(drawCard())}'`;
 const extractNumber = div => div.split('id="')[1].split('"')[0];
-const makeCardCode = _.compose(innerHTML, extractNumber);
+const makeCardCode = drawCard => _.compose(innerHTML(drawCard), extractNumber);
 
-const fillWithCards = fileString => {
+const fillWithCards = (deck, fileString) => {
+	const drawCard = deck.pop.bind(deck);
 	const commands = fileString
 		.split('\n')
 		.filter(cardInClassP)
-		.map(makeCardCode);
+		.map(makeCardCode(drawCard));
 
 	const putInScript = commands => `<script>\n${commands.join(';\n')};\n</script>`;
 	const addToFile = (fileString, commands) => {
@@ -47,14 +73,23 @@ const fillWithCards = fileString => {
 	return addToFile(fileString, commands);
 };
 
-const readFile = filename => fs.readFileSync(filename, 'utf8');
+const fillBoardWithCards = ([deck, board]) => fillWithCards(deck, board);
 
-// app :: String -> String
-const app = _.compose(
-	fillWithCards,
-	readFile
+const readFiles = boardFile => deckName => unboxDeck(deckName)
+	.and(readBoard(boardFile)).run().future();
+
+const app = log => layoutFile => _.compose(
+	_.map(log),
+	_.map(fillBoardWithCards),
+	readFiles(layoutFile)
 );
 
-print(
-	app('celtic.html')
-);
+const drawCeltic = app(print)('celtic.html');
+
+const whichDeck = [
+	'deck',
+	'majorArcana',
+	'minorArcana'
+];
+
+drawCeltic(whichDeck[0]);
