@@ -1,1 +1,1212 @@
-[{"cardName":"Priest of Wands","position":"Priest","arcana":"Minor Arcana"},{"cardName":"Priest of Pentacles","position":"Priest","imagePath":"faces/magus_of_pentacles.jpg","arcana":"Minor Arcana"},{"cardName":"Priest of Swords","position":"Priest","arcana":"Minor Arcana"},{"cardName":"Priest of Chalices","position":"Priest","imagePath":"faces/magus_of_chalices2.jpg","arcana":"Minor Arcana"},{"cardName":"Priestess of Wands","position":"Priestess","imagePath":"faces/mousa_of_wands.jpg","arcana":"Minor Arcana"},{"cardName":"Priestess of Pentacles","position":"Priestess","arcana":"Minor Arcana"},{"cardName":"Priestess of Swords","position":"Priestess","imagePath":"faces/mousa_of_swords.jpg","arcana":"Minor Arcana"},{"cardName":"Priestess of Chalices","position":"Priestess","imagePath":"faces/mousa_of_chalices1.jpg","arcana":"Minor Arcana"},{"cardName":"Warrior of Wands","position":"Warrior","imagePath":"faces/warrior-of-wands21.jpg","arcana":"Minor Arcana"},{"cardName":"Warrior of Pentacles","position":"Warrior","imagePath":"faces/warrior_of_pentacles.jpg","arcana":"Minor Arcana"},{"cardName":"Warrior of Swords","position":"Warrior","imagePath":"faces/warrior-of-swords2.jpg","arcana":"Minor Arcana"},{"cardName":"Warrior of Chalices","position":"Warrior","imagePath":"faces/warrior_of_chalices.jpg","arcana":"Minor Arcana"},{"cardName":"Maiden of Wands","position":"Maiden","imagePath":"faces/maiden_of_wands.jpg","arcana":"Minor Arcana"},{"cardName":"Maiden of Pentacles","position":"Maiden","imagePath":"faces/maiden-of-pentacles.jpg","arcana":"Minor Arcana"},{"cardName":"Maiden of Swords","position":"Maiden","imagePath":"faces/maiden-of-swords1.jpg","arcana":"Minor Arcana"},{"cardName":"Maiden of Chalices","position":"Maiden","imagePath":"faces/maiden_of_chalices.jpg","arcana":"Minor Arcana"},{"cardName":"Moon","sphere":"Moon","number":"18","arcana":"Major Arcana","darkGod":"Shugara","altName":"Moon","imagePath":"faces/18-moon-shugara3.jpg","noThe":false},{"cardName":"Lucifer","sphere":"Moon","number":"15","arcana":"Major Arcana","darkGod":"Noctulius","altName":"Deofel","imagePath":"faces/15-deofel-noctulius2.jpg","noThe":true},{"cardName":"Death","sphere":"Moon","number":"13","arcana":"Major Arcana","darkGod":"Nythra","altName":"Death","imagePath":"faces/13-death-nythra1.jpg","noThe":true},{"cardName":"Fool","sphere":"Mercury","number":"0","arcana":"Major Arcana","darkGod":"Ga Wath Am","altName":"Physis","noThe":false},{"cardName":"Change","sphere":"Mercury","number":"8","arcana":"Major Arcana","darkGod":"Nekalah","altName":"Change","imagePath":"faces/08-change-nekalah2.jpg","noThe":true},{"cardName":"Tower","sphere":"Mercury","number":"16","arcana":"Major Arcana","darkGod":"Abatu","altName":"War","imagePath":"faces/16-war-abatu2.jpg","noThe":false},{"cardName":"Lovers","sphere":"Venus","number":"6","arcana":"Major Arcana","darkGod":"Karu Samsu","altName":"Lovers","imagePath":"faces/06-lovers-karu-samsu.jpg","noThe":false},{"cardName":"Hel","sphere":"Venus","number":"14","arcana":"Major Arcana","darkGod":"Aosoth","altName":"Hel","imagePath":"faces/14-hel-aosoth1.jpg","noThe":true},{"cardName":"Star","sphere":"Venus","number":"17","arcana":"Major Arcana","darkGod":"Nemicu","altName":"Star","imagePath":"faces/17-star-nemicu3.jpg","noThe":false},{"cardName":"Azoth","sphere":"Sun","number":"7","arcana":"Major Arcana","darkGod":"Satanas","altName":"Azoth","imagePath":"faces/07-azoth-satanas1.jpg","noThe":true},{"cardName":"Hanged Man","sphere":"Sun","number":"12","arcana":"Major Arcana","darkGod":"Vindex","altName":"Opfer","imagePath":"faces/12-opfer-vindex2.jpg","noThe":false},{"cardName":"Master","sphere":"Sun","number":"5","arcana":"Major Arcana","darkGod":"Atazoth","altName":"Master","imagePath":"faces/05-master-atazoth.jpg","noThe":false},{"cardName":"Magickian","sphere":"Mars","number":"1","arcana":"Major Arcana","darkGod":"Binan Ath","altName":"Magickian","noThe":false},{"cardName":"Lord of Earth","sphere":"Mars","number":"4","arcana":"Major Arcana","darkGod":"Kthunae","altName":"Lord of Earth","imagePath":"faces/04-lord-of-earth-kthunae.jpg","noThe":false},{"cardName":"Hermit","sphere":"Mars","number":"9","arcana":"Major Arcana","darkGod":"Sauroctonos","altName":"Hermit","imagePath":"faces/09-hermit-sauroctonos2.jpg","noThe":false},{"cardName":"Desire","sphere":"Jupiter","number":"11","arcana":"Major Arcana","darkGod":"Lidagon","altName":"Desire","imagePath":"faces/11-desire-lidagon1.jpg","noThe":false},{"cardName":"Mistress of Earth","sphere":"Jupiter","number":"3","arcana":"Major Arcana","darkGod":"Davcina","altName":"Mistress of Earth","imagePath":"faces/03-mistress-of-earth-davcina.jpg","noThe":false},{"cardName":"High Priestess","sphere":"Jupiter","number":"2","arcana":"Major Arcana","darkGod":"Mactoron","altName":"High Priestess","imagePath":"faces/02-high-priestess-mactoron.jpg","noThe":false},{"cardName":"Wyrd","sphere":"Saturn","number":"10","arcana":"Major Arcana","darkGod":"Azanigin","altName":"Wyrd","imagePath":"faces/10-wyrd-azanigin2.jpg","noThe":false},{"cardName":"Sun","sphere":"Saturn","number":"19","arcana":"Major Arcana","darkGod":"Velpecula","altName":"Sun","imagePath":"faces/19-sun-velpecula1.jpg","noThe":false},{"cardName":"Aeon","sphere":"Saturn","number":"20","arcana":"Major Arcana","darkGod":"Naos","altName":"Aeon","imagePath":"faces/20-aeon-naos2.jpg","noThe":false}]
+{
+  "deck": [
+    {
+      "cardName": "Moon",
+      "sphere": "Moon",
+      "number": "18",
+      "arcana": "Major Arcana",
+      "darkGod": "Shugara",
+      "altName": "Moon",
+      "imagePath": "faces/18-moon-shugara3.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Lucifer",
+      "sphere": "Moon",
+      "number": "15",
+      "arcana": "Major Arcana",
+      "darkGod": "Noctulius",
+      "altName": "Deofel",
+      "imagePath": "faces/15-deofel-noctulius2.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Death",
+      "sphere": "Moon",
+      "number": "13",
+      "arcana": "Major Arcana",
+      "darkGod": "Nythra",
+      "altName": "Death",
+      "imagePath": "faces/13-death-nythra1.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Fool",
+      "sphere": "Mercury",
+      "number": "0",
+      "arcana": "Major Arcana",
+      "darkGod": "Ga Wath Am",
+      "altName": "Physis",
+      "noThe": false
+    },
+    {
+      "cardName": "Change",
+      "sphere": "Mercury",
+      "number": "8",
+      "arcana": "Major Arcana",
+      "darkGod": "Nekalah",
+      "altName": "Change",
+      "imagePath": "faces/08-change-nekalah2.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Tower",
+      "sphere": "Mercury",
+      "number": "16",
+      "arcana": "Major Arcana",
+      "darkGod": "Abatu",
+      "altName": "War",
+      "imagePath": "faces/16-war-abatu2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Lovers",
+      "sphere": "Venus",
+      "number": "6",
+      "arcana": "Major Arcana",
+      "darkGod": "Karu Samsu",
+      "altName": "Lovers",
+      "imagePath": "faces/06-lovers-karu-samsu.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Hel",
+      "sphere": "Venus",
+      "number": "14",
+      "arcana": "Major Arcana",
+      "darkGod": "Aosoth",
+      "altName": "Hel",
+      "imagePath": "faces/14-hel-aosoth1.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Star",
+      "sphere": "Venus",
+      "number": "17",
+      "arcana": "Major Arcana",
+      "darkGod": "Nemicu",
+      "altName": "Star",
+      "imagePath": "faces/17-star-nemicu3.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Azoth",
+      "sphere": "Sun",
+      "number": "7",
+      "arcana": "Major Arcana",
+      "darkGod": "Satanas",
+      "altName": "Azoth",
+      "imagePath": "faces/07-azoth-satanas1.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Hanged Man",
+      "sphere": "Sun",
+      "number": "12",
+      "arcana": "Major Arcana",
+      "darkGod": "Vindex",
+      "altName": "Opfer",
+      "imagePath": "faces/12-opfer-vindex2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Master",
+      "sphere": "Sun",
+      "number": "5",
+      "arcana": "Major Arcana",
+      "darkGod": "Atazoth",
+      "altName": "Master",
+      "imagePath": "faces/05-master-atazoth.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Magickian",
+      "sphere": "Mars",
+      "number": "1",
+      "arcana": "Major Arcana",
+      "darkGod": "Binan Ath",
+      "altName": "Magickian",
+      "noThe": false
+    },
+    {
+      "cardName": "Lord of Earth",
+      "sphere": "Mars",
+      "number": "4",
+      "arcana": "Major Arcana",
+      "darkGod": "Kthunae",
+      "altName": "Lord of Earth",
+      "imagePath": "faces/04-lord-of-earth-kthunae.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Hermit",
+      "sphere": "Mars",
+      "number": "9",
+      "arcana": "Major Arcana",
+      "darkGod": "Sauroctonos",
+      "altName": "Hermit",
+      "imagePath": "faces/09-hermit-sauroctonos2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Desire",
+      "sphere": "Jupiter",
+      "number": "11",
+      "arcana": "Major Arcana",
+      "darkGod": "Lidagon",
+      "altName": "Desire",
+      "imagePath": "faces/11-desire-lidagon1.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Mistress of Earth",
+      "sphere": "Jupiter",
+      "number": "3",
+      "arcana": "Major Arcana",
+      "darkGod": "Davcina",
+      "altName": "Mistress of Earth",
+      "imagePath": "faces/03-mistress-of-earth-davcina.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "High Priestess",
+      "sphere": "Jupiter",
+      "number": "2",
+      "arcana": "Major Arcana",
+      "darkGod": "Mactoron",
+      "altName": "High Priestess",
+      "imagePath": "faces/02-high-priestess-mactoron.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Wyrd",
+      "sphere": "Saturn",
+      "number": "10",
+      "arcana": "Major Arcana",
+      "darkGod": "Azanigin",
+      "altName": "Wyrd",
+      "imagePath": "faces/10-wyrd-azanigin2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Sun",
+      "sphere": "Saturn",
+      "number": "19",
+      "arcana": "Major Arcana",
+      "darkGod": "Velpecula",
+      "altName": "Sun",
+      "imagePath": "faces/19-sun-velpecula1.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Aeon",
+      "sphere": "Saturn",
+      "number": "20",
+      "arcana": "Major Arcana",
+      "darkGod": "Naos",
+      "altName": "Aeon",
+      "imagePath": "faces/20-aeon-naos2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Priest of Wands",
+      "position": "Priest",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Pentacles",
+      "position": "Priest",
+      "imagePath": "faces/magus_of_pentacles.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Swords",
+      "position": "Priest",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Chalices",
+      "position": "Priest",
+      "imagePath": "faces/magus_of_chalices2.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Wands",
+      "position": "Priestess",
+      "imagePath": "faces/mousa_of_wands.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Pentacles",
+      "position": "Priestess",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Swords",
+      "position": "Priestess",
+      "imagePath": "faces/mousa_of_swords.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Chalices",
+      "position": "Priestess",
+      "imagePath": "faces/mousa_of_chalices1.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Wands",
+      "position": "Warrior",
+      "imagePath": "faces/warrior-of-wands21.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Pentacles",
+      "position": "Warrior",
+      "imagePath": "faces/warrior_of_pentacles.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Swords",
+      "position": "Warrior",
+      "imagePath": "faces/warrior-of-swords2.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Chalices",
+      "position": "Warrior",
+      "imagePath": "faces/warrior_of_chalices.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Wands",
+      "position": "Maiden",
+      "imagePath": "faces/maiden_of_wands.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Pentacles",
+      "position": "Maiden",
+      "imagePath": "faces/maiden-of-pentacles.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Swords",
+      "position": "Maiden",
+      "imagePath": "faces/maiden-of-swords1.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Chalices",
+      "position": "Maiden",
+      "imagePath": "faces/maiden_of_chalices.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Wands",
+      "position": "Priest",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Pentacles",
+      "position": "Priest",
+      "imagePath": "faces/magus_of_pentacles.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Swords",
+      "position": "Priest",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Chalices",
+      "position": "Priest",
+      "imagePath": "faces/magus_of_chalices2.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Wands",
+      "position": "Priestess",
+      "imagePath": "faces/mousa_of_wands.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Pentacles",
+      "position": "Priestess",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Swords",
+      "position": "Priestess",
+      "imagePath": "faces/mousa_of_swords.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Chalices",
+      "position": "Priestess",
+      "imagePath": "faces/mousa_of_chalices1.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Wands",
+      "position": "Warrior",
+      "imagePath": "faces/warrior-of-wands21.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Pentacles",
+      "position": "Warrior",
+      "imagePath": "faces/warrior_of_pentacles.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Swords",
+      "position": "Warrior",
+      "imagePath": "faces/warrior-of-swords2.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Chalices",
+      "position": "Warrior",
+      "imagePath": "faces/warrior_of_chalices.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Wands",
+      "position": "Maiden",
+      "imagePath": "faces/maiden_of_wands.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Pentacles",
+      "position": "Maiden",
+      "imagePath": "faces/maiden-of-pentacles.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Swords",
+      "position": "Maiden",
+      "imagePath": "faces/maiden-of-swords1.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Chalices",
+      "position": "Maiden",
+      "imagePath": "faces/maiden_of_chalices.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Moon",
+      "sphere": "Moon",
+      "number": "18",
+      "arcana": "Major Arcana",
+      "darkGod": "Shugara",
+      "altName": "Moon",
+      "imagePath": "faces/18-moon-shugara3.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Lucifer",
+      "sphere": "Moon",
+      "number": "15",
+      "arcana": "Major Arcana",
+      "darkGod": "Noctulius",
+      "altName": "Deofel",
+      "imagePath": "faces/15-deofel-noctulius2.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Death",
+      "sphere": "Moon",
+      "number": "13",
+      "arcana": "Major Arcana",
+      "darkGod": "Nythra",
+      "altName": "Death",
+      "imagePath": "faces/13-death-nythra1.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Fool",
+      "sphere": "Mercury",
+      "number": "0",
+      "arcana": "Major Arcana",
+      "darkGod": "Ga Wath Am",
+      "altName": "Physis",
+      "noThe": false
+    },
+    {
+      "cardName": "Change",
+      "sphere": "Mercury",
+      "number": "8",
+      "arcana": "Major Arcana",
+      "darkGod": "Nekalah",
+      "altName": "Change",
+      "imagePath": "faces/08-change-nekalah2.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Tower",
+      "sphere": "Mercury",
+      "number": "16",
+      "arcana": "Major Arcana",
+      "darkGod": "Abatu",
+      "altName": "War",
+      "imagePath": "faces/16-war-abatu2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Lovers",
+      "sphere": "Venus",
+      "number": "6",
+      "arcana": "Major Arcana",
+      "darkGod": "Karu Samsu",
+      "altName": "Lovers",
+      "imagePath": "faces/06-lovers-karu-samsu.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Hel",
+      "sphere": "Venus",
+      "number": "14",
+      "arcana": "Major Arcana",
+      "darkGod": "Aosoth",
+      "altName": "Hel",
+      "imagePath": "faces/14-hel-aosoth1.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Star",
+      "sphere": "Venus",
+      "number": "17",
+      "arcana": "Major Arcana",
+      "darkGod": "Nemicu",
+      "altName": "Star",
+      "imagePath": "faces/17-star-nemicu3.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Azoth",
+      "sphere": "Sun",
+      "number": "7",
+      "arcana": "Major Arcana",
+      "darkGod": "Satanas",
+      "altName": "Azoth",
+      "imagePath": "faces/07-azoth-satanas1.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Hanged Man",
+      "sphere": "Sun",
+      "number": "12",
+      "arcana": "Major Arcana",
+      "darkGod": "Vindex",
+      "altName": "Opfer",
+      "imagePath": "faces/12-opfer-vindex2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Master",
+      "sphere": "Sun",
+      "number": "5",
+      "arcana": "Major Arcana",
+      "darkGod": "Atazoth",
+      "altName": "Master",
+      "imagePath": "faces/05-master-atazoth.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Magickian",
+      "sphere": "Mars",
+      "number": "1",
+      "arcana": "Major Arcana",
+      "darkGod": "Binan Ath",
+      "altName": "Magickian",
+      "noThe": false
+    },
+    {
+      "cardName": "Lord of Earth",
+      "sphere": "Mars",
+      "number": "4",
+      "arcana": "Major Arcana",
+      "darkGod": "Kthunae",
+      "altName": "Lord of Earth",
+      "imagePath": "faces/04-lord-of-earth-kthunae.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Hermit",
+      "sphere": "Mars",
+      "number": "9",
+      "arcana": "Major Arcana",
+      "darkGod": "Sauroctonos",
+      "altName": "Hermit",
+      "imagePath": "faces/09-hermit-sauroctonos2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Desire",
+      "sphere": "Jupiter",
+      "number": "11",
+      "arcana": "Major Arcana",
+      "darkGod": "Lidagon",
+      "altName": "Desire",
+      "imagePath": "faces/11-desire-lidagon1.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Mistress of Earth",
+      "sphere": "Jupiter",
+      "number": "3",
+      "arcana": "Major Arcana",
+      "darkGod": "Davcina",
+      "altName": "Mistress of Earth",
+      "imagePath": "faces/03-mistress-of-earth-davcina.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "High Priestess",
+      "sphere": "Jupiter",
+      "number": "2",
+      "arcana": "Major Arcana",
+      "darkGod": "Mactoron",
+      "altName": "High Priestess",
+      "imagePath": "faces/02-high-priestess-mactoron.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Wyrd",
+      "sphere": "Saturn",
+      "number": "10",
+      "arcana": "Major Arcana",
+      "darkGod": "Azanigin",
+      "altName": "Wyrd",
+      "imagePath": "faces/10-wyrd-azanigin2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Sun",
+      "sphere": "Saturn",
+      "number": "19",
+      "arcana": "Major Arcana",
+      "darkGod": "Velpecula",
+      "altName": "Sun",
+      "imagePath": "faces/19-sun-velpecula1.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Aeon",
+      "sphere": "Saturn",
+      "number": "20",
+      "arcana": "Major Arcana",
+      "darkGod": "Naos",
+      "altName": "Aeon",
+      "imagePath": "faces/20-aeon-naos2.jpg",
+      "noThe": false
+    }
+  ],
+  "Major Arcana": [
+    {
+      "cardName": "Moon",
+      "sphere": "Moon",
+      "number": "18",
+      "arcana": "Major Arcana",
+      "darkGod": "Shugara",
+      "altName": "Moon",
+      "imagePath": "faces/18-moon-shugara3.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Lucifer",
+      "sphere": "Moon",
+      "number": "15",
+      "arcana": "Major Arcana",
+      "darkGod": "Noctulius",
+      "altName": "Deofel",
+      "imagePath": "faces/15-deofel-noctulius2.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Death",
+      "sphere": "Moon",
+      "number": "13",
+      "arcana": "Major Arcana",
+      "darkGod": "Nythra",
+      "altName": "Death",
+      "imagePath": "faces/13-death-nythra1.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Fool",
+      "sphere": "Mercury",
+      "number": "0",
+      "arcana": "Major Arcana",
+      "darkGod": "Ga Wath Am",
+      "altName": "Physis",
+      "noThe": false
+    },
+    {
+      "cardName": "Change",
+      "sphere": "Mercury",
+      "number": "8",
+      "arcana": "Major Arcana",
+      "darkGod": "Nekalah",
+      "altName": "Change",
+      "imagePath": "faces/08-change-nekalah2.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Tower",
+      "sphere": "Mercury",
+      "number": "16",
+      "arcana": "Major Arcana",
+      "darkGod": "Abatu",
+      "altName": "War",
+      "imagePath": "faces/16-war-abatu2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Lovers",
+      "sphere": "Venus",
+      "number": "6",
+      "arcana": "Major Arcana",
+      "darkGod": "Karu Samsu",
+      "altName": "Lovers",
+      "imagePath": "faces/06-lovers-karu-samsu.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Hel",
+      "sphere": "Venus",
+      "number": "14",
+      "arcana": "Major Arcana",
+      "darkGod": "Aosoth",
+      "altName": "Hel",
+      "imagePath": "faces/14-hel-aosoth1.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Star",
+      "sphere": "Venus",
+      "number": "17",
+      "arcana": "Major Arcana",
+      "darkGod": "Nemicu",
+      "altName": "Star",
+      "imagePath": "faces/17-star-nemicu3.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Azoth",
+      "sphere": "Sun",
+      "number": "7",
+      "arcana": "Major Arcana",
+      "darkGod": "Satanas",
+      "altName": "Azoth",
+      "imagePath": "faces/07-azoth-satanas1.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Hanged Man",
+      "sphere": "Sun",
+      "number": "12",
+      "arcana": "Major Arcana",
+      "darkGod": "Vindex",
+      "altName": "Opfer",
+      "imagePath": "faces/12-opfer-vindex2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Master",
+      "sphere": "Sun",
+      "number": "5",
+      "arcana": "Major Arcana",
+      "darkGod": "Atazoth",
+      "altName": "Master",
+      "imagePath": "faces/05-master-atazoth.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Magickian",
+      "sphere": "Mars",
+      "number": "1",
+      "arcana": "Major Arcana",
+      "darkGod": "Binan Ath",
+      "altName": "Magickian",
+      "noThe": false
+    },
+    {
+      "cardName": "Lord of Earth",
+      "sphere": "Mars",
+      "number": "4",
+      "arcana": "Major Arcana",
+      "darkGod": "Kthunae",
+      "altName": "Lord of Earth",
+      "imagePath": "faces/04-lord-of-earth-kthunae.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Hermit",
+      "sphere": "Mars",
+      "number": "9",
+      "arcana": "Major Arcana",
+      "darkGod": "Sauroctonos",
+      "altName": "Hermit",
+      "imagePath": "faces/09-hermit-sauroctonos2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Desire",
+      "sphere": "Jupiter",
+      "number": "11",
+      "arcana": "Major Arcana",
+      "darkGod": "Lidagon",
+      "altName": "Desire",
+      "imagePath": "faces/11-desire-lidagon1.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Mistress of Earth",
+      "sphere": "Jupiter",
+      "number": "3",
+      "arcana": "Major Arcana",
+      "darkGod": "Davcina",
+      "altName": "Mistress of Earth",
+      "imagePath": "faces/03-mistress-of-earth-davcina.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "High Priestess",
+      "sphere": "Jupiter",
+      "number": "2",
+      "arcana": "Major Arcana",
+      "darkGod": "Mactoron",
+      "altName": "High Priestess",
+      "imagePath": "faces/02-high-priestess-mactoron.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Wyrd",
+      "sphere": "Saturn",
+      "number": "10",
+      "arcana": "Major Arcana",
+      "darkGod": "Azanigin",
+      "altName": "Wyrd",
+      "imagePath": "faces/10-wyrd-azanigin2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Sun",
+      "sphere": "Saturn",
+      "number": "19",
+      "arcana": "Major Arcana",
+      "darkGod": "Velpecula",
+      "altName": "Sun",
+      "imagePath": "faces/19-sun-velpecula1.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Aeon",
+      "sphere": "Saturn",
+      "number": "20",
+      "arcana": "Major Arcana",
+      "darkGod": "Naos",
+      "altName": "Aeon",
+      "imagePath": "faces/20-aeon-naos2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Moon",
+      "sphere": "Moon",
+      "number": "18",
+      "arcana": "Major Arcana",
+      "darkGod": "Shugara",
+      "altName": "Moon",
+      "imagePath": "faces/18-moon-shugara3.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Lucifer",
+      "sphere": "Moon",
+      "number": "15",
+      "arcana": "Major Arcana",
+      "darkGod": "Noctulius",
+      "altName": "Deofel",
+      "imagePath": "faces/15-deofel-noctulius2.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Death",
+      "sphere": "Moon",
+      "number": "13",
+      "arcana": "Major Arcana",
+      "darkGod": "Nythra",
+      "altName": "Death",
+      "imagePath": "faces/13-death-nythra1.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Fool",
+      "sphere": "Mercury",
+      "number": "0",
+      "arcana": "Major Arcana",
+      "darkGod": "Ga Wath Am",
+      "altName": "Physis",
+      "noThe": false
+    },
+    {
+      "cardName": "Change",
+      "sphere": "Mercury",
+      "number": "8",
+      "arcana": "Major Arcana",
+      "darkGod": "Nekalah",
+      "altName": "Change",
+      "imagePath": "faces/08-change-nekalah2.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Tower",
+      "sphere": "Mercury",
+      "number": "16",
+      "arcana": "Major Arcana",
+      "darkGod": "Abatu",
+      "altName": "War",
+      "imagePath": "faces/16-war-abatu2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Lovers",
+      "sphere": "Venus",
+      "number": "6",
+      "arcana": "Major Arcana",
+      "darkGod": "Karu Samsu",
+      "altName": "Lovers",
+      "imagePath": "faces/06-lovers-karu-samsu.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Hel",
+      "sphere": "Venus",
+      "number": "14",
+      "arcana": "Major Arcana",
+      "darkGod": "Aosoth",
+      "altName": "Hel",
+      "imagePath": "faces/14-hel-aosoth1.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Star",
+      "sphere": "Venus",
+      "number": "17",
+      "arcana": "Major Arcana",
+      "darkGod": "Nemicu",
+      "altName": "Star",
+      "imagePath": "faces/17-star-nemicu3.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Azoth",
+      "sphere": "Sun",
+      "number": "7",
+      "arcana": "Major Arcana",
+      "darkGod": "Satanas",
+      "altName": "Azoth",
+      "imagePath": "faces/07-azoth-satanas1.jpg",
+      "noThe": true
+    },
+    {
+      "cardName": "Hanged Man",
+      "sphere": "Sun",
+      "number": "12",
+      "arcana": "Major Arcana",
+      "darkGod": "Vindex",
+      "altName": "Opfer",
+      "imagePath": "faces/12-opfer-vindex2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Master",
+      "sphere": "Sun",
+      "number": "5",
+      "arcana": "Major Arcana",
+      "darkGod": "Atazoth",
+      "altName": "Master",
+      "imagePath": "faces/05-master-atazoth.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Magickian",
+      "sphere": "Mars",
+      "number": "1",
+      "arcana": "Major Arcana",
+      "darkGod": "Binan Ath",
+      "altName": "Magickian",
+      "noThe": false
+    },
+    {
+      "cardName": "Lord of Earth",
+      "sphere": "Mars",
+      "number": "4",
+      "arcana": "Major Arcana",
+      "darkGod": "Kthunae",
+      "altName": "Lord of Earth",
+      "imagePath": "faces/04-lord-of-earth-kthunae.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Hermit",
+      "sphere": "Mars",
+      "number": "9",
+      "arcana": "Major Arcana",
+      "darkGod": "Sauroctonos",
+      "altName": "Hermit",
+      "imagePath": "faces/09-hermit-sauroctonos2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Desire",
+      "sphere": "Jupiter",
+      "number": "11",
+      "arcana": "Major Arcana",
+      "darkGod": "Lidagon",
+      "altName": "Desire",
+      "imagePath": "faces/11-desire-lidagon1.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Mistress of Earth",
+      "sphere": "Jupiter",
+      "number": "3",
+      "arcana": "Major Arcana",
+      "darkGod": "Davcina",
+      "altName": "Mistress of Earth",
+      "imagePath": "faces/03-mistress-of-earth-davcina.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "High Priestess",
+      "sphere": "Jupiter",
+      "number": "2",
+      "arcana": "Major Arcana",
+      "darkGod": "Mactoron",
+      "altName": "High Priestess",
+      "imagePath": "faces/02-high-priestess-mactoron.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Wyrd",
+      "sphere": "Saturn",
+      "number": "10",
+      "arcana": "Major Arcana",
+      "darkGod": "Azanigin",
+      "altName": "Wyrd",
+      "imagePath": "faces/10-wyrd-azanigin2.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Sun",
+      "sphere": "Saturn",
+      "number": "19",
+      "arcana": "Major Arcana",
+      "darkGod": "Velpecula",
+      "altName": "Sun",
+      "imagePath": "faces/19-sun-velpecula1.jpg",
+      "noThe": false
+    },
+    {
+      "cardName": "Aeon",
+      "sphere": "Saturn",
+      "number": "20",
+      "arcana": "Major Arcana",
+      "darkGod": "Naos",
+      "altName": "Aeon",
+      "imagePath": "faces/20-aeon-naos2.jpg",
+      "noThe": false
+    }
+  ],
+  "Minor Arcana": [
+    {
+      "cardName": "Priest of Wands",
+      "position": "Priest",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Pentacles",
+      "position": "Priest",
+      "imagePath": "faces/magus_of_pentacles.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Swords",
+      "position": "Priest",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Chalices",
+      "position": "Priest",
+      "imagePath": "faces/magus_of_chalices2.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Wands",
+      "position": "Priestess",
+      "imagePath": "faces/mousa_of_wands.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Pentacles",
+      "position": "Priestess",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Swords",
+      "position": "Priestess",
+      "imagePath": "faces/mousa_of_swords.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Chalices",
+      "position": "Priestess",
+      "imagePath": "faces/mousa_of_chalices1.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Wands",
+      "position": "Warrior",
+      "imagePath": "faces/warrior-of-wands21.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Pentacles",
+      "position": "Warrior",
+      "imagePath": "faces/warrior_of_pentacles.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Swords",
+      "position": "Warrior",
+      "imagePath": "faces/warrior-of-swords2.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Chalices",
+      "position": "Warrior",
+      "imagePath": "faces/warrior_of_chalices.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Wands",
+      "position": "Maiden",
+      "imagePath": "faces/maiden_of_wands.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Pentacles",
+      "position": "Maiden",
+      "imagePath": "faces/maiden-of-pentacles.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Swords",
+      "position": "Maiden",
+      "imagePath": "faces/maiden-of-swords1.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Chalices",
+      "position": "Maiden",
+      "imagePath": "faces/maiden_of_chalices.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Wands",
+      "position": "Priest",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Pentacles",
+      "position": "Priest",
+      "imagePath": "faces/magus_of_pentacles.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Swords",
+      "position": "Priest",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priest of Chalices",
+      "position": "Priest",
+      "imagePath": "faces/magus_of_chalices2.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Wands",
+      "position": "Priestess",
+      "imagePath": "faces/mousa_of_wands.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Pentacles",
+      "position": "Priestess",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Swords",
+      "position": "Priestess",
+      "imagePath": "faces/mousa_of_swords.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Priestess of Chalices",
+      "position": "Priestess",
+      "imagePath": "faces/mousa_of_chalices1.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Wands",
+      "position": "Warrior",
+      "imagePath": "faces/warrior-of-wands21.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Pentacles",
+      "position": "Warrior",
+      "imagePath": "faces/warrior_of_pentacles.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Swords",
+      "position": "Warrior",
+      "imagePath": "faces/warrior-of-swords2.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Warrior of Chalices",
+      "position": "Warrior",
+      "imagePath": "faces/warrior_of_chalices.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Wands",
+      "position": "Maiden",
+      "imagePath": "faces/maiden_of_wands.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Pentacles",
+      "position": "Maiden",
+      "imagePath": "faces/maiden-of-pentacles.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Swords",
+      "position": "Maiden",
+      "imagePath": "faces/maiden-of-swords1.jpg",
+      "arcana": "Minor Arcana"
+    },
+    {
+      "cardName": "Maiden of Chalices",
+      "position": "Maiden",
+      "imagePath": "faces/maiden_of_chalices.jpg",
+      "arcana": "Minor Arcana"
+    }
+  ]
+}

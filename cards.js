@@ -201,7 +201,12 @@ const makeMinorArcana = makeDeck(positionToCard);
 
 const majorArcana = makeMajorArcana(spheres);
 const minorArcana = makeMinorArcana(positions);
-const deck = _.concat(minorArcana, majorArcana);
+const decks = {
+	majorArcana,
+	minorArcana,
+	deck: _.concat(minorArcana, majorArcana)
+};
+
 const errorCallback = err => {
 	if (err) throw err;
 };
@@ -224,18 +229,31 @@ const prepareForStorage = card => {
 	return strippedCard;
 };
 
+const reObjectify = decks => {
+	const decksObject = {
+		deck: [],
+		'Major Arcana': [],
+		'Minor Arcana': []
+	};
+	decks.forEach(cards => {
+		cards.forEach(card => {
+			decksObject[card.arcana].push(card);
+			decksObject.deck.push(card);
+		});
+	});
+	return decksObject;
+};
+
+const prettyJSON = s => JSON.stringify(s, null, 2);
+
 const cacheDeck = log => _.compose(
 	log,
-	_.map(_.compose(
-		JSON.stringify,
-		prepareForStorage
-	))
+	prettyJSON,
+	reObjectify,
+	_.map(_.map(prepareForStorage)),
+	_.values()
 );
 
-//cacheDeck(writeToFile('deck.json'))(deck).run();
+cacheDeck(writeToFile('deck.json'))(decks).run();
 
-module.exports = {
-	deck: _.concat(minorArcana, majorArcana),
-	minorArcana,
-	majorArcana
-};
+module.exports = decks;

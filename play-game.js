@@ -32,7 +32,7 @@ const readFile = generalReadFile(_.identity);
 
 const getDeckFromCache = arcana => {
 	return generalReadFile(_.compose(
-		// _.prop(arcana), // TODO implement
+		_.prop(arcana),
 		shuffle, 
 		JSON.parse)
 	)(CACHE_FILE);
@@ -86,10 +86,10 @@ const app = log => layoutFile => _.compose(
 
 const drawCeltic = app(print)('celtic.html');
 
-const whichDeck = [
-	'deck',
-	'majorArcana',
-	'minorArcana'
-];
+const whichDeck = {
+	'deck': 'deck',
+	'majorArcana': 'Major Arcana',
+	'minorArcana': 'Minor Arcana'
+};
 
-drawCeltic(whichDeck[0]);
+drawCeltic(whichDeck.majorArcana);
